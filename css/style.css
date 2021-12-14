@@ -166,6 +166,31 @@ Site: https://themeforest.net/user/abcgomel/portfolio
 /* This only works with JavaScript, 
 if it's not present, don't show loader */
 
+.blink {
+        animation: blinker 0.6s linear infinite;
+      }
+      @keyframes blinker {
+        50% {
+          opacity: 0;
+        }
+      }
+      .blink-one {
+        animation: blinker-one 1s linear infinite;
+      }
+      @keyframes blinker-one {
+        0% {
+          opacity: 0;
+        }
+      }
+      .blink-two {
+        animation: blinker-two 1.4s linear infinite;
+      }
+      @keyframes blinker-two {
+        100% {
+          opacity: 0;
+        }
+      }
+
 #loader-overflow{
   display:block;
   width: 100%;
@@ -1200,6 +1225,11 @@ support for no js
 	line-height:32px;
 	color:#4b4e53; 
   border-left:#4b4e53 2px solid;
+}
+
+p {
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .p-50-cont{ padding-top:50px; padding-bottom:50px;}
@@ -2363,6 +2393,8 @@ table.shopping-cart-table tr th, table.shopping-cart-table tr td {
   color:#101010;
 }
 .post-prev-text {
+  text-align: justify !important;
+  text-justify: inter-word !important;
   padding-bottom:20px;
   margin-bottom:20px;
   border-bottom:1px solid #eee;
@@ -2607,7 +2639,7 @@ table.shopping-cart-table tr th, table.shopping-cart-table tr td {
 }
 .sm-video-bg {
   background-image: url(../images/static-media/video-bg.jpg);
-  background-position: 50% 0px;
+  background-position: 0px;
   overflow: hidden;
   position:relative;
 }
@@ -3208,7 +3240,7 @@ select.input-border {
   z-index:5;
 }
 #main-menu .navbar .nav > li > a {
-  font-size:12px;
+  font-size:13px;
   color:#5c6066;
   z-index: 1;
   text-shadow: none;
@@ -3236,7 +3268,7 @@ select.input-border {
 	line-height:20px;
 }
 #main-menu .navbar .nav > li > a {
-	padding:38px 3px 5px 3px;
+	padding:45px 3px 5px 3px;
 	margin: 0 12px 17px 12px;
 	border-bottom: 2px solid rgba(45,78,83,0);
 	color:#4b4e53;
@@ -3245,10 +3277,10 @@ select.input-border {
 }
 .affix.header-1 #main-menu .navbar .nav > li > a {
 	margin-bottom: 13px;
-	padding: 20px 3px 5px 3px;
+	padding:27px 3px 5px 3px;
 }
 .header-1 #main-menu .navbar .nav > li.current > a {
-	padding:38px 3px 5px 3px;
+	padding:45px 3px 5px 3px;
 	margin: 0 12px 17px 12px;
 	border-bottom: 2px solid rgba(45,78,83,1);
 	color:#4b4e53; 
@@ -3259,7 +3291,7 @@ select.input-border {
 }
 .affix.header-1 #main-menu .navbar .nav > li.current > a{
   margin-bottom: 13px;
-	padding: 20px 3px 5px 3px;
+	padding: 27px 3px 5px 3px;
 	border-color:rgba(75,78,83,.5); 
 }
 .affix.header-1.black-header #main-menu .navbar .nav > li.current > a{
@@ -3790,7 +3822,7 @@ background:none;
 header .logo {
 	display: block;
 	padding-bottom: 15px;
-	padding-left: 45px;
+	padding-left: 85px;
   padding-top: 81px;
 	-webkit-transition: all .4s ease 0s;
 	-o-transition: all .4s ease 0s;
@@ -3821,7 +3853,9 @@ header.affix  .logo-2, .header.affix.no-transparent .logo-2 {
 	transition: all .4s ease 0s;
 }
 .logo-img {
-  height: 42px;
+  height: 52px;
+  max-height: 200%;
+  max-width: 200%;
 }
 .logo-img.logo-color-change {
   -webkit-filter: brightness(0) invert(1);
