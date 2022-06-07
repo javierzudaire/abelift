@@ -2637,12 +2637,24 @@ table.shopping-cart-table tr th, table.shopping-cart-table tr td {
   overflow: hidden;
   background-repeat: no-repeat;
 }
-.sm-video-bg {
+
+@media only screen and (max-device-width: 640px) {
+  .sm-video-bg {
   background-image: url(../images/static-media/video-bg.jpg);
   background-position: 0px;
   overflow: hidden;
   position:relative;
+  }
 }
+    
+@media only screen and (min-device-width: 768px) {
+  .sm-video-bg {
+  background-position: 0px;
+  overflow: hidden;
+  position:relative;
+  }
+}
+
 .sm-content-cont{
   display: table;
   height:600px;
